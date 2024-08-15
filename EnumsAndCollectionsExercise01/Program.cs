@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace EnumsAndCollectionsExercise01
 {
-    internal class Program
+    class Program
     {
+        private static readonly Random random = new Random();
         static void Main(string[] args)
         {
+            Card myCard = new Card((Values)random.Next(1,14), (Suits)random.Next(4));
+            Console.WriteLine(myCard.Name);
         }
     }
 }
